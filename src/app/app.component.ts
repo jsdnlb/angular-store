@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  private num1 = 1
-  private num2 = 2
+  private num1 = 1;
+  private num2 = 2;
   title = 'Angular Store';
   age = 21;
   sum = this.num1 + this.num2;
@@ -16,5 +16,17 @@ export class AppComponent {
   data = {
     name: 'Dani',
     age: 50,
+  };
+
+  toggleButton() {
+    this.btnStatus = !this.btnStatus;
+  }
+
+  increaseAge() {
+    this.data.age += 1;
+  }
+
+  decreaseAge() {
+    this.data.age -= 1;
   }
 }
