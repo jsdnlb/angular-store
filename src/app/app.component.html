@@ -1,3 +1,9 @@
+<h1>Property Binding</h1>
+<button [disabled]="btnStatus">Send</button>
+<input type="text" [value]="data.name" /><br />
+<progress max="100" [value]="data.age"></progress>
+
+<hr />
 <h1>{{ title }}</h1>
 <h2>Age = {{ age }}</h2>
 <marquee behavior="" direction="right">
@@ -5,4 +11,4 @@
     Simple sum with two private variables and return public variable = {{ sum }}
   </h2>
 </marquee>
-<img src="{{ random_image }}" alt="Rangom image" width="600">
+<img src="{{ random_image }}" alt="Rangom image" width="600" />

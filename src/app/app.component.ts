@@ -11,5 +11,10 @@ export class AppComponent {
   title = 'Angular Store';
   age = 21;
   sum = this.num1 + this.num2;
-  random_image = 'https://source.unsplash.com/random'
+  random_image = 'https://source.unsplash.com/random';
+  btnStatus = true; //default true
+  data = {
+    name: 'Dani',
+    age: 50,
+  }
 }
