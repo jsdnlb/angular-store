@@ -17,6 +17,7 @@ export class AppComponent {
     name: 'Dani',
     age: 50,
   };
+  positionScrollDiv = 0;
 
   toggleButton() {
     this.btnStatus = !this.btnStatus;
@@ -28,5 +29,15 @@ export class AppComponent {
 
   decreaseAge() {
     this.data.age -= 1;
+  }
+
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    this.positionScrollDiv = element.scrollTop
+  }
+
+  changeName(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.data.name = element.value;
   }
 }

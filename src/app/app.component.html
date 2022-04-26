@@ -1,4 +1,26 @@
-<h1>Events Binding</h1>
+<h1>Events Blinding Keyup</h1>
+<h2>{{ data.name }}</h2>
+<input type="text" [value]="data.name" (keyup)="changeName($event)"/><br />
+
+
+<hr>
+<h1>Events Binding Scroll</h1>
+<h3>Position Scroll {{ positionScrollDiv }}</h3>
+<div class="box" (scroll)="onScroll($event)">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+  soluta expedita ullam dolorem deleniti ab voluptatibus enim necessitatibus
+  reprehenderit error. Qui repellat consequuntur dolores accusantium sequi at
+  quas iste molestias? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Autem fugiat maxime illum voluptate aspernatur, earum ratione veniam, aliquid
+  ex doloribus quod non ullam voluptates beatae animi! Officia libero nemo ad.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem debitis
+  nesciunt numquam dolore voluptate nihil mollitia iure cum sunt dignissimos
+  perferendis distinctio consectetur aspernatur sit, molestiae necessitatibus
+  quibusdam perspiciatis aut!
+</div>
+
+<hr />
+<h1>Events Binding Click</h1>
 <button [disabled]="btnStatus">Send</button>
 <button (click)="toggleButton()">Toggle Button</button>
 <p>Edad {{ data.age }}</p>
