@@ -1,4 +1,13 @@
-<h1>Events Blinding Keyup</h1>
+<h1>Data binding NgModel</h1>
+<p>Name {{ data.name}} </p>
+<input type="text" required="" #nameInput="ngModel" [(ngModel)]="data.name" >
+<p>Valid: {{ nameInput.valid }} </p>
+<p>Name {{ age}} </p>
+<input type="number" required="" max="30" min="18" #ageInput="ngModel" [(ngModel)]="age" >
+<p>Valid: {{ ageInput.valid }} </p>
+
+
+<hr><h1>Events Blinding Keyup</h1>
 <h2>{{ data.name }}</h2>
 <input type="text" [value]="data.name" (keyup)="changeName($event)"/><br />
 
