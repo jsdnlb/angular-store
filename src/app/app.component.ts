@@ -18,6 +18,8 @@ export class AppComponent {
     age: 50,
   };
   positionScrollDiv = 0;
+  names: string[] = ['Dani', 'Santi', 'Sofi','Dolly']
+  newName = ''
 
   toggleButton() {
     this.btnStatus = !this.btnStatus;
@@ -39,5 +41,14 @@ export class AppComponent {
   changeName(event: Event){
     const element = event.target as HTMLInputElement;
     this.data.name = element.value;
+  }
+
+  addName(){
+    this.names.push(this.newName)
+    this.newName = ''
+  }
+
+  deleteName(id: number){
+    this.names.splice(id, 1)
   }
 }

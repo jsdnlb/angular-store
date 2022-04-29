@@ -1,3 +1,24 @@
+<h1> *ngFor</h1>
+<input type="text" [(ngModel)]="newName">
+<button (click)="addName()" > Add name</button>
+<ul>
+  <li *ngIf="names.length === 0">There are no elements</li>
+ <li *ngFor="let name of names; index as i">
+   {{i}} - {{ name}}
+   <button (click)="deleteName(i)" >Delete</button>
+ </li>
+</ul>
+
+
+<hr><h1> *ngIf </h1>
+<input type="text" required [(ngModel)]="data.name">
+<p *ngIf="data.name === 'Daniel'"> Soy Daniel</p>
+<p *ngIf="data.name === 'Buitrago' && age === 18; else elseBlock"> Soy Buitrago</p>
+<ng-template #elseBlock>
+  <p>Conditional else</p>
+</ng-template>
+
+<hr>
 <h1>Data binding NgModel</h1>
 <p>Name {{ data.name}} </p>
 <input type="text" required="" #nameInput="ngModel" [(ngModel)]="data.name" >
